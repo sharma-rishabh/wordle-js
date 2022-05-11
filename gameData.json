@@ -1,0 +1,29 @@
+{
+  "actualWord": "crate",
+  "guesses": [
+    [
+      {
+        "character": "a",
+        "position": "present"
+      },
+      {
+        "character": "u",
+        "position": "absent"
+      },
+      {
+        "character": "d",
+        "position": "absent"
+      },
+      {
+        "character": "i",
+        "position": "absent"
+      },
+      {
+        "character": "o",
+        "position": "absent"
+      }
+    ]
+  ],
+  "gameOver": false,
+  "isLastGuessValid": true
+}

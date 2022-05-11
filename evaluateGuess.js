@@ -1,9 +1,8 @@
-const { fs } = require('fs');
+const fs = require('fs');
 const FIVE = 5;
+const ONE = 1;
 
-const isWordValid = (guessedWord) => {
-  const allWords = fs.readFileSync('/usr/share/dict/words', 'utf8').split('\n');
-  const validWords = allWords.filter((word) => word.length === FIVE);
+const isWordValid = (guessedWord, validWords) => {
   return validWords.includes(guessedWord);
 };
 
@@ -23,3 +22,36 @@ const evaluateGuess = (actual, guessed) => {
   }
   return guessResult;
 };
+
+const getValidWords = () => {
+  const allWords = fs.readFileSync('/usr/share/dict/words', 'utf8').split('\n');
+  return allWords.filter((word) => word.length === FIVE);
+};
+
+const readGameData = () =>
+  JSON.parse(fs.readFileSync('./gameData.json', 'utf8'));
+
+const writeGameData = (gameData) => {
+  const gameDataString = JSON.stringify(gameData, null, 2);
+  fs.writeFileSync('./gameData.json', gameDataString, 'utf8');
+};
+
+const updateGameData = (gameData, guess, validWords) => {
+  if (!isWordValid(guess, validWords)) {
+    gameData.isLastGuessValid = false;
+    return -ONE;
+  }
+  gameData.isLastGuessValid = true;
+  return gameData.guesses.push(evaluateGuess(gameData.actualWord, guess));
+};
+
+const main = ([...args]) => {
+  const guess = args.pop();
+  const validWords = getValidWords();
+  const gameData = readGameData();
+  updateGameData(gameData, guess, validWords);
+  writeGameData(gameData);
+  return gameData;
+};
+
+main(process.argv);
