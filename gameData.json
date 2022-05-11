@@ -22,8 +22,31 @@
         "character": "o",
         "position": "absent"
       }
+    ],
+    [
+      {
+        "character": "t",
+        "position": "present"
+      },
+      {
+        "character": "r",
+        "position": "correct"
+      },
+      {
+        "character": "a",
+        "position": "correct"
+      },
+      {
+        "character": "i",
+        "position": "absent"
+      },
+      {
+        "character": "t",
+        "position": "present"
+      }
     ]
   ],
+  "guessRemaining": 4,
   "gameOver": false,
   "isLastGuessValid": true
 }

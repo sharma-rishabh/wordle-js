@@ -1,6 +1,7 @@
 const fs = require('fs');
 const FIVE = 5;
 const ONE = 1;
+const TWO = 2;
 
 const isWordValid = (guessedWord, validWords) => {
   return validWords.includes(guessedWord);
@@ -32,7 +33,7 @@ const readGameData = () =>
   JSON.parse(fs.readFileSync('./gameData.json', 'utf8'));
 
 const writeGameData = (gameData) => {
-  const gameDataString = JSON.stringify(gameData, null, 2);
+  const gameDataString = JSON.stringify(gameData, null, TWO);
   fs.writeFileSync('./gameData.json', gameDataString, 'utf8');
 };
 
@@ -41,7 +42,9 @@ const updateGameData = (gameData, guess, validWords) => {
     gameData.isLastGuessValid = false;
     return -ONE;
   }
+  gameData.guessRemaining -= 1;
   gameData.isLastGuessValid = true;
+  gameData.gameOver = !gameData.guessRemaining;
   return gameData.guesses.push(evaluateGuess(gameData.actualWord, guess));
 };
 
