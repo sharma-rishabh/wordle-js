@@ -17,7 +17,7 @@ const positionStatus = (actual, guessed, index) => {
 const evaluateGuess = (actual, guessed) => {
   const guessResult = [];
   for (let index = 0; index < actual.length; index++) {
-    const character = guessed[index];
+    const character = guessed[index].toUpperCase();
     const position = positionStatus(actual, guessed, index);
     guessResult.push({ character, position });
   }
@@ -44,8 +44,17 @@ const updateGameData = (gameData, guess, validWords) => {
   }
   gameData.guessRemaining -= 1;
   gameData.isLastGuessValid = true;
-  gameData.gameOver = !gameData.guessRemaining;
+  setGameOverFlag(gameData, guess);
   return gameData.guesses.push(evaluateGuess(gameData.actualWord, guess));
+};
+
+const setGameOverFlag = (gameData, guess) => {
+  if (guess === gameData.actualWord) {
+    gameData.gameOver = true;
+    return gameData;
+  }
+  gameData.gameOver = !gameData.guessRemaining;
+  return gameData;
 };
 
 const main = ([...args]) => {

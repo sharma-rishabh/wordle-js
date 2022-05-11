@@ -1,52 +1,7 @@
 {
-  "actualWord": "crate",
-  "guesses": [
-    [
-      {
-        "character": "a",
-        "position": "present"
-      },
-      {
-        "character": "u",
-        "position": "absent"
-      },
-      {
-        "character": "d",
-        "position": "absent"
-      },
-      {
-        "character": "i",
-        "position": "absent"
-      },
-      {
-        "character": "o",
-        "position": "absent"
-      }
-    ],
-    [
-      {
-        "character": "t",
-        "position": "present"
-      },
-      {
-        "character": "r",
-        "position": "correct"
-      },
-      {
-        "character": "a",
-        "position": "correct"
-      },
-      {
-        "character": "i",
-        "position": "absent"
-      },
-      {
-        "character": "t",
-        "position": "present"
-      }
-    ]
-  ],
-  "guessRemaining": 4,
+  "actualWord": "slept",
+  "guesses": [],
+  "guessRemaining": 6,
   "gameOver": false,
   "isLastGuessValid": true
 }
