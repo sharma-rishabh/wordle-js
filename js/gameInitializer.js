@@ -1,3 +1,4 @@
+const { log } = console;
 const fs = require('fs');
 const TWO = 2;
 const FIVE = 5;
@@ -20,10 +21,14 @@ const setNewData = () => {
 
 const createNewFiles = () => {
   const dataString = JSON.stringify(setNewData(), null, TWO);
-  fs.writeFileSync('./gameData.json', dataString, 'utf8');
-  fs.writeFileSync('./index.html', '', 'utf8');
-  fs.writeFileSync('./isGameOver.txt', 'false', 'utf8');
-  fs.writeFileSync('./isLastGuessValid.txt', 'true');
+  try {
+    fs.writeFileSync('./index.html', '', 'utf8');
+    fs.writeFileSync('./data/gameData.json', dataString, 'utf8');
+    fs.writeFileSync('./data/isGameOver.txt', 'false', 'utf8');
+    fs.writeFileSync('./data/isLastGuessValid.txt', 'true', 'utf-8');
+  } catch (error) {
+    log('Error while writing files.');
+  }
 };
 
 createNewFiles();

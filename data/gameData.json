@@ -1,10 +1,10 @@
 {
-  "actualWord": "sword",
+  "actualWord": "Vedda",
   "guesses": [
     [
       {
         "character": "A",
-        "position": "absent"
+        "position": "present"
       },
       {
         "character": "U",
@@ -12,7 +12,7 @@
       },
       {
         "character": "D",
-        "position": "present"
+        "position": "correct"
       },
       {
         "character": "I",
@@ -20,86 +20,20 @@
       },
       {
         "character": "O",
-        "position": "present"
-      }
-    ],
-    [
-      {
-        "character": "B",
-        "position": "absent"
-      },
-      {
-        "character": "R",
-        "position": "present"
-      },
-      {
-        "character": "E",
-        "position": "absent"
-      },
-      {
-        "character": "A",
-        "position": "absent"
-      },
-      {
-        "character": "K",
         "position": "absent"
       }
     ],
     [
       {
         "character": "E",
-        "position": "absent"
+        "position": "present"
       },
       {
         "character": "A",
-        "position": "absent"
+        "position": "present"
       },
       {
         "character": "R",
-        "position": "present"
-      },
-      {
-        "character": "T",
-        "position": "absent"
-      },
-      {
-        "character": "H",
-        "position": "absent"
-      }
-    ],
-    [
-      {
-        "character": "R",
-        "position": "present"
-      },
-      {
-        "character": "A",
-        "position": "absent"
-      },
-      {
-        "character": "D",
-        "position": "present"
-      },
-      {
-        "character": "I",
-        "position": "absent"
-      },
-      {
-        "character": "O",
-        "position": "present"
-      }
-    ],
-    [
-      {
-        "character": "D",
-        "position": "present"
-      },
-      {
-        "character": "E",
-        "position": "absent"
-      },
-      {
-        "character": "A",
         "position": "absent"
       },
       {
@@ -113,15 +47,81 @@
     ],
     [
       {
-        "character": "D",
-        "position": "present"
+        "character": "C",
+        "position": "absent"
       },
       {
-        "character": "E",
+        "character": "R",
         "position": "absent"
       },
       {
         "character": "A",
+        "position": "present"
+      },
+      {
+        "character": "T",
+        "position": "absent"
+      },
+      {
+        "character": "E",
+        "position": "present"
+      }
+    ],
+    [
+      {
+        "character": "M",
+        "position": "absent"
+      },
+      {
+        "character": "O",
+        "position": "absent"
+      },
+      {
+        "character": "U",
+        "position": "absent"
+      },
+      {
+        "character": "T",
+        "position": "absent"
+      },
+      {
+        "character": "H",
+        "position": "absent"
+      }
+    ],
+    [
+      {
+        "character": "M",
+        "position": "absent"
+      },
+      {
+        "character": "O",
+        "position": "absent"
+      },
+      {
+        "character": "U",
+        "position": "absent"
+      },
+      {
+        "character": "T",
+        "position": "absent"
+      },
+      {
+        "character": "H",
+        "position": "absent"
+      }
+    ],
+    [
+      {
+        "character": "M",
+        "position": "absent"
+      },
+      {
+        "character": "O",
+        "position": "absent"
+      },
+      {
+        "character": "U",
         "position": "absent"
       },
       {

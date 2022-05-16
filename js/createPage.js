@@ -1,3 +1,4 @@
+const { log } = console;
 const fs = require('fs');
 const FIVE = 5;
 
@@ -38,7 +39,7 @@ const emptyRows = (count) => {
   return generateTag('div', emptyRow(), 'class', 'row').repeat(count);
 };
 
-const readGameData = () => fs.readFileSync('./gameData.json', 'utf8');
+const readGameData = () => fs.readFileSync('./data/gameData.json', 'utf8');
 
 const generateRows = (gameData) => {
   let rows = filledRows(gameData.guesses);
@@ -63,7 +64,7 @@ const generateBody = (gameData) => {
 const generateHead = () => {
   const title = generateTag('title', 'Wordle');
   const relation = generateAttributes('rel', 'stylesheet');
-  const reference = generateAttributes('href', 'styles.css');
+  const reference = generateAttributes('href', 'css/styles.css');
   const link = '<link ' + relation + reference + '>';
   return generateTag('head', title + link);
 };
@@ -74,12 +75,17 @@ const generatePage = (gameData) => {
   return generateTag('html', head + body);
 };
 
-const writeFile = (string) => fs.writeFileSync('./index.html', string, 'utf-8');
+const writeFile = (string) =>
+  fs.writeFileSync('./index.html', string, 'utf-8');
 
 const main = () => {
   const gameData = JSON.parse(readGameData());
   const html = generatePage(gameData);
-  writeFile(html);
+  try {
+    writeFile(html);
+  } catch (error) {
+    log('Error while generating HTML.');
+  }
 };
 
 main();

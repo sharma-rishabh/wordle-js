@@ -1,3 +1,4 @@
+const { log } = console;
 const fs = require('fs');
 const FIVE = 5;
 const ONE = 1;
@@ -30,15 +31,17 @@ const getValidWords = () => {
 };
 
 const readGameData = () =>
-  JSON.parse(fs.readFileSync('./gameData.json', 'utf8'));
+  JSON.parse(fs.readFileSync('./data/gameData.json', 'utf8'));
 
 const writeGameData = (gameData) => {
   const gameDataString = JSON.stringify(gameData, null, TWO);
-  fs.writeFileSync('./gameData.json', gameDataString, 'utf8');
+  fs.writeFileSync('./data/gameData.json', gameDataString, 'utf8');
+
   const isGameOver = gameData.gameOver.toString();
+  fs.writeFileSync('./data/isGameOver.txt', isGameOver, 'utf-8');
+
   const isLastGuessValid = gameData.isLastGuessValid.toString();
-  fs.writeFileSync('./isGameOver.txt', isGameOver, 'utf-8');
-  fs.writeFileSync('./isLastGuessValid.txt', isLastGuessValid, 'utf8');
+  fs.writeFileSync('./data/isLastGuessValid.txt', isLastGuessValid, 'utf8');
 };
 
 const updateGameData = (gameData, guess, validWords) => {
@@ -64,8 +67,15 @@ const setGameOverFlag = (gameData, guess) => {
 
 const main = ([...args]) => {
   const guess = args.pop();
-  const validWords = getValidWords();
-  const gameData = readGameData();
+  let validWords;
+  let gameData;
+  try {
+    validWords = getValidWords();
+    gameData = readGameData();
+
+  } catch (error) {
+    log('Error while reading gameData or words.');
+  }
   updateGameData(gameData, guess, validWords);
   writeGameData(gameData);
   return gameData;
