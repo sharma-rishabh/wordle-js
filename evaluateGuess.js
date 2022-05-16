@@ -35,6 +35,10 @@ const readGameData = () =>
 const writeGameData = (gameData) => {
   const gameDataString = JSON.stringify(gameData, null, TWO);
   fs.writeFileSync('./gameData.json', gameDataString, 'utf8');
+  const isGameOver = gameData.gameOver.toString();
+  const isLastGuessValid = gameData.isLastGuessValid.toString();
+  fs.writeFileSync('./isGameOver.txt', isGameOver, 'utf-8');
+  fs.writeFileSync('./isLastGuessValid.txt', isLastGuessValid, 'utf8');
 };
 
 const updateGameData = (gameData, guess, validWords) => {

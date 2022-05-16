@@ -21,6 +21,8 @@ const createNewFiles = () => {
   const dataString = JSON.stringify(setNewData(), null, TWO);
   fs.writeFileSync('./gameData.json', dataString, 'utf8');
   fs.writeFileSync('./index.html', '', 'utf8');
+  fs.writeFileSync('./isGameOver.txt', 'false', 'utf8');
+  fs.writeFileSync('./isLastGuessValid.txt', 'true');
 };
 
 createNewFiles();
