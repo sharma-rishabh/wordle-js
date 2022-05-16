@@ -1,7 +1,141 @@
 {
-  "actualWord": "reown",
-  "guesses": [],
-  "guessRemaining": 6,
-  "gameOver": false,
-  "isLastGuessValid": true
+  "actualWord": "sword",
+  "guesses": [
+    [
+      {
+        "character": "A",
+        "position": "absent"
+      },
+      {
+        "character": "U",
+        "position": "absent"
+      },
+      {
+        "character": "D",
+        "position": "present"
+      },
+      {
+        "character": "I",
+        "position": "absent"
+      },
+      {
+        "character": "O",
+        "position": "present"
+      }
+    ],
+    [
+      {
+        "character": "B",
+        "position": "absent"
+      },
+      {
+        "character": "R",
+        "position": "present"
+      },
+      {
+        "character": "E",
+        "position": "absent"
+      },
+      {
+        "character": "A",
+        "position": "absent"
+      },
+      {
+        "character": "K",
+        "position": "absent"
+      }
+    ],
+    [
+      {
+        "character": "E",
+        "position": "absent"
+      },
+      {
+        "character": "A",
+        "position": "absent"
+      },
+      {
+        "character": "R",
+        "position": "present"
+      },
+      {
+        "character": "T",
+        "position": "absent"
+      },
+      {
+        "character": "H",
+        "position": "absent"
+      }
+    ],
+    [
+      {
+        "character": "R",
+        "position": "present"
+      },
+      {
+        "character": "A",
+        "position": "absent"
+      },
+      {
+        "character": "D",
+        "position": "present"
+      },
+      {
+        "character": "I",
+        "position": "absent"
+      },
+      {
+        "character": "O",
+        "position": "present"
+      }
+    ],
+    [
+      {
+        "character": "D",
+        "position": "present"
+      },
+      {
+        "character": "E",
+        "position": "absent"
+      },
+      {
+        "character": "A",
+        "position": "absent"
+      },
+      {
+        "character": "T",
+        "position": "absent"
+      },
+      {
+        "character": "H",
+        "position": "absent"
+      }
+    ],
+    [
+      {
+        "character": "D",
+        "position": "present"
+      },
+      {
+        "character": "E",
+        "position": "absent"
+      },
+      {
+        "character": "A",
+        "position": "absent"
+      },
+      {
+        "character": "T",
+        "position": "absent"
+      },
+      {
+        "character": "H",
+        "position": "absent"
+      }
+    ]
+  ],
+  "guessRemaining": 0,
+  "gameOver": true,
+  "isLastGuessValid": true,
+  "wordGuessed": false
 }

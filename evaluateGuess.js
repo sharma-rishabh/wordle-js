@@ -55,6 +55,7 @@ const updateGameData = (gameData, guess, validWords) => {
 const setGameOverFlag = (gameData, guess) => {
   if (guess === gameData.actualWord) {
     gameData.gameOver = true;
+    gameData.wordGuessed = true;
     return gameData;
   }
   gameData.gameOver = !gameData.guessRemaining;

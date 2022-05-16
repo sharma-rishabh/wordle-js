@@ -23,8 +23,8 @@ header>h1 {
 
 .rows {
   margin: 0px auto;
-  width: 25%;
-  height: 600px;
+  width: 22%;
+  height: 470px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -65,4 +65,17 @@ span {
   height: 72px;
   background-color: hsl(240, 2%, 23%);
   border: none;
+}
+
+.message {
+  margin: 1.5em auto;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4em;
+  height: 2em;
+  background-color: azure;
+  border-radius: 10px;
 }

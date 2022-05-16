@@ -5,6 +5,11 @@ const generateAttributes = (name, value) => {
   return name + '=' + '"' + value + '"';
 };
 
+const generateMessage = (gameData) => {
+  const message = gameData.wordGuessed ? 'Genius' : gameData.actualWord;
+  return generateTag('div', message, 'class', 'message');
+};
+
 const generateTag = (tag, data, attributeName, value) => {
   const attribute = generateAttributes(attributeName, value);
   const tagWithAttribute = '<' + tag + ' ' + attribute + '>';
@@ -49,6 +54,9 @@ const generateHeader = () => {
 const generateBody = (gameData) => {
   let content = generateHeader();
   content += generateRows(gameData);
+  if (gameData.gameOver) {
+    content += generateMessage(gameData);
+  }
   return generateTag('body', content);
 };
 

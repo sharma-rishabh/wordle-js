@@ -8,7 +8,8 @@ const setNewData = () => {
     'guesses': [],
     'guessRemaining': 6,
     'gameOver': false,
-    'isLastGuessValid': true
+    'isLastGuessValid': true,
+    'wordGuessed': false
   };
   const allWords = fs.readFileSync('/usr/share/dict/words', 'utf8').split('\n');
   const validWords = allWords.filter((word) => word.length === FIVE);
